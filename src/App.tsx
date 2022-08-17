@@ -2,25 +2,74 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+//function declaration
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    //полезное что-то
+
+
+    //обязана вернуть JSX
+    console.log('App rendering')
+    return (
+        <div>
+            <AppTitle/>
+            <Rating/>
+            <Accordion/>
+            <Rating/>
+        </div>
+    );
+}
+
+function AppTitle() {
+    console.log('AppTitle rendering')
+    return (
+        <h1>This is APP component</h1>
+    )
+}
+
+function Star() {
+    console.log('Star rendering')
+    return (
+        <div>Star</div>
+    )
+}
+
+function Rating() {
+    console.log('Rating rendering')
+    return (
+        <>
+            <Star/>
+            <Star/>
+            <Star/>
+            <Star/>
+            <Star/>
+        </>
+    );
+}
+
+function Accordion() {
+    console.log('Accordion rendering')
+    return <div>
+        <AccordionTitle/>
+        <AccordionBody/>
     </div>
-  );
+}
+
+function AccordionTitle() {
+    console.log('AccordionTitle rendering')
+    return (
+        <h2>Menu</h2>
+    )
+}
+
+function AccordionBody() {
+    console.log('AccordionBody rendering')
+    return (
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    )
 }
 
 export default App;
